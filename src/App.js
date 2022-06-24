@@ -4,6 +4,12 @@ import CardList from './components/card-list/card-list.component';
 import Searchbox from './components/search-box/search-box.component';
 import './App.css';
 
+// import axios from 'axios';
+
+// const api = axios.create({
+//   baseURL: `https://jsonplaceholder.typicode.com/users`
+// });
+
 class App extends Component {
   constructor(){
     super();
@@ -13,7 +19,16 @@ class App extends Component {
       searchField: ''
     };
 
+    // api.get('/')
+    // .then(response => {
+    //   console.log(response.data);
+    // }, error => {
+    //   console.log(error);
+    // });
+  
   }
+  // axios.get
+
   componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
